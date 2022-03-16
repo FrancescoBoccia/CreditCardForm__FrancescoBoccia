@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style/css/style.css" />
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
     <title>Credit Card</title>
   </head>
   <body>
@@ -14,9 +14,19 @@
       <div class="container__formDiv">
         <form class="container__form" action="submit">
           <label for="Card">Card Number</label>
-          <input class="container__form__input" type="text" placeholder="" />
+          <input
+            id="cardNumber"
+            class="container__form__input"
+            type="text"
+            placeholder=""
+          />
           <label for="name">Card Name</label>
-          <input class="container__form__input" type="text" placeholder="" />
+          <input
+            id="cardName"
+            class="container__form__input"
+            type="text"
+            placeholder=""
+          />
         </form>
 
         <div class="title">
@@ -24,7 +34,7 @@
           <div class="title__cvv">CVV</div>
         </div>
         <div class="options">
-          <select class="options__select" name="month" id="">
+          <select class="options__select" name="month" id="optionMonth">
             <option class="options__title" value="">Month</option>
             <option value="1">01</option>
             <option value="2">02</option>
@@ -41,7 +51,7 @@
           </select>
 
           <div class="options__year">
-            <select class="options__select" name="month" id="">
+            <select class="options__select" name="month" id="optionYear">
               <option class="options__title" value="">Year</option>
               <option value="22">2022</option>
               <option value="23">2023</option>
@@ -85,7 +95,7 @@
       <div class="frontCard__flex">
         <div class="frontCard__holder">
           <div class="frontCard__holder__title">Card Holder</div>
-          <div class="frontCard__holder__name">Johnosn Rocco</div>
+          <div class="frontCard__holder__name"></div>
         </div>
 
         <div class="frontCard__expires">

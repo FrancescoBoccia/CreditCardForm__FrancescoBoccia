@@ -1,0 +1,47 @@
+:root {
+  --bg-color: #d4eafd;
+  --button-color: #0055d4;
+}
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: var(--bg-color);
+}
+
+.container {
+  position: absolute;
+  top: 60%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  border: 1px solid red;
+  padding-top: 9rem;
+  background-color: #fff;
+  &__formDiv {
+    padding: 1rem;
+  }
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    &__input {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 2rem;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__month {
+  }
+  &__cvvInput {
+    width: 20%;
+    float: right;
+  }
+}

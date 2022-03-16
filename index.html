@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/css/style.css" />
+    <script src="script.js"></script>
+    <title>Credit Card</title>
+  </head>
+  <body>
+    <!-- Container -->
+    <div class="container">
+      <div class="container__formDiv">
+        <form class="container__form" action="submit">
+          <label for="Card">Card Number</label>
+          <input class="container__form__input" type="text" placeholder="" />
+          <label for="name">Card Name</label>
+          <input class="container__form__input" type="text" placeholder="" />
+        </form>
+
+        <div class="title">
+          <div class="title__date">Expiration Date</div>
+          <div class="title__cvv">CVV</div>
+        </div>
+        <div class="options">
+          <select name="month" id="">
+            <option class="option__title" value="">Month</option>
+            <option value="1">01</option>
+            <option value="2">02</option>
+            <option value="3">03</option>
+            <option value="4">04</option>
+            <option value="5">05</option>
+            <option value="6">06</option>
+            <option value="7">07</option>
+            <option value="8">08</option>
+            <option value="9">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+
+          <div class="options__year">
+            <select name="month" id="">
+              <option class="option__title" value="">Year</option>
+              <option value="22">2022</option>
+              <option value="23">2023</option>
+              <option value="24">2024</option>
+              <option value="25">2025</option>
+              <option value="26">2026</option>
+              <option value="27">2027</option>
+              <option value="28">2028</option>
+              <option value="29">2029</option>
+              <option value="30">2030</option>
+            </select>
+          </div>
+
+          <input class="options__cvvInput" type="text" placeholder="" />
+        </div>
+        <button type="submit">Submit</button>
+      </div>
+    </div>
+
+    <!-- Front Card -->
+
+    <div class="frontCard">
+      <div class="frontCard__header">
+        <div class="frontCard__pin">
+          <div class="frontCard__pin__chipLine"></div>
+          <div class="frontCard__pin__chipLine"></div>
+          <div class="frontCard__pin__chipLine"></div>
+          <div class="frontCard__pin__chipLine"></div>
+          <div class="frontCard__pin__main"></div>
+        </div>
+        <div class="frontCard__cardBrand">Discover</div>
+      </div>
+
+      <div class="frontCard__cardNumber">
+        <div class="frontCard__cardNumber__numbers"></div>
+        <div class="frontCard__cardNumber__numbers"></div>
+        <div class="frontCard__cardNumber__numbers"></div>
+        <div class="frontCard__cardNumber__numbers"></div>
+      </div>
+
+      <div class="frontCard__holder">
+        <div class="frontCard__holder__title">Card Holder</div>
+        <div class="frontCard__holder__name"></div>
+      </div>
+
+      <div class="frontCard__expires">
+        <div class="frontCard__expires__title">Expires</div>
+        <div class="frontCard__expires__date">MM/YY</div>
+      </div>
+    </div>
+
+    <!-- Back Card -->
+    <div class="backCard">
+      <div class="backCard__header"></div>
+      <div class="backCard__cvvTitle">CVV</div>
+      <div class="backCard__inputCVV"></div>
+      <div class="backCard__cardBrand"></div>
+    </div>
+    <style>
+      .backCard,
+      .frontCard {
+        display: none;
+      }
+    </style>
+  </body>
+</html>

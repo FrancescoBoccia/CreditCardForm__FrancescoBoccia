@@ -24,8 +24,8 @@
           <div class="title__cvv">CVV</div>
         </div>
         <div class="options">
-          <select name="month" id="">
-            <option class="option__title" value="">Month</option>
+          <select class="options__select" name="month" id="">
+            <option class="options__title" value="">Month</option>
             <option value="1">01</option>
             <option value="2">02</option>
             <option value="3">03</option>
@@ -41,8 +41,8 @@
           </select>
 
           <div class="options__year">
-            <select name="month" id="">
-              <option class="option__title" value="">Year</option>
+            <select class="options__select" name="month" id="">
+              <option class="options__title" value="">Year</option>
               <option value="22">2022</option>
               <option value="23">2023</option>
               <option value="24">2024</option>
@@ -57,7 +57,7 @@
 
           <input class="options__cvvInput" type="text" placeholder="" />
         </div>
-        <button type="submit">Submit</button>
+        <button class="options__submit" type="submit">Submit</button>
       </div>
     </div>
 
@@ -76,20 +76,22 @@
       </div>
 
       <div class="frontCard__cardNumber">
-        <div class="frontCard__cardNumber__numbers"></div>
-        <div class="frontCard__cardNumber__numbers"></div>
-        <div class="frontCard__cardNumber__numbers"></div>
-        <div class="frontCard__cardNumber__numbers"></div>
+        <div class="frontCard__cardNumber__numbers">####</div>
+        <div class="frontCard__cardNumber__numbers">####</div>
+        <div class="frontCard__cardNumber__numbers">####</div>
+        <div class="frontCard__cardNumber__numbers">####</div>
       </div>
 
-      <div class="frontCard__holder">
-        <div class="frontCard__holder__title">Card Holder</div>
-        <div class="frontCard__holder__name"></div>
-      </div>
+      <div class="frontCard__flex">
+        <div class="frontCard__holder">
+          <div class="frontCard__holder__title">Card Holder</div>
+          <div class="frontCard__holder__name">Johnosn Rocco</div>
+        </div>
 
-      <div class="frontCard__expires">
-        <div class="frontCard__expires__title">Expires</div>
-        <div class="frontCard__expires__date">MM/YY</div>
+        <div class="frontCard__expires">
+          <div class="frontCard__expires__title">Expires</div>
+          <div class="frontCard__expires__date">MM/YY</div>
+        </div>
       </div>
     </div>
 
@@ -101,8 +103,7 @@
       <div class="backCard__cardBrand"></div>
     </div>
     <style>
-      .backCard,
-      .frontCard {
+      .backCard {
         display: none;
       }
     </style>

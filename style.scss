@@ -72,11 +72,12 @@ body {
 
 // Front Card
 
-.frontCard {
+.frontCard,
+.backCard {
   position: absolute;
   right: 50%;
-  top: 50%;
-  height: 8rem;
+  top: 55%;
+  height: 9rem;
   width: 16rem;
   padding: 1rem;
   background-image: linear-gradient(#6dd5ed, #2193b0);
@@ -184,5 +185,31 @@ body {
       width: max-content;
       color: white;
     }
+  }
+}
+
+// Back Card
+
+.backCard {
+  display: none;
+  &__header {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: black;
+  }
+  &__cvvTitle {
+    width: 100%;
+    font-size: 12px;
+    text-align: right;
+    color: #fff;
+  }
+  &__inputCVV {
+    padding: 1rem;
+    background-color: #fff;
+  }
+  &__cardBrand {
+    font-size: 14px;
+    margin-top: 1rem;
+    float: right;
   }
 }

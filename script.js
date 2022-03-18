@@ -8,24 +8,33 @@ const optionMonth = document.getElementById("optionMonth");
 const optionYear = document.getElementById("optionYear");
 const expiresDate = document.querySelector(".frontCard__expires__date");
 
-cardNumber.addEventListener("keypress", function (e) {
-  if (e.key == "Enter") {
-    const value = cardNumber.value;
-    const arrayNumber = value.split(" ");
-
-    cardNumberUser.innerHTML = `        
+cardNumber.addEventListener("input", function () {
+  const value = cardNumber.value;
+  const arrayNumber = value.split(" ");
+  console.log(arrayNumber);
+  if (arrayNumber.length < 4) {
+    cardNumberUser.innerHTML = `
     <div class="frontCard__cardNumber__numbers">${arrayNumber[0]}</div>
     <div class="frontCard__cardNumber__numbers">${arrayNumber[1]}</div>
     <div class="frontCard__cardNumber__numbers">${arrayNumber[2]}</div>
     <div class="frontCard__cardNumber__numbers">${arrayNumber[3]}</div>`;
+  } else {
+    return alert("Only 4 digit");
   }
 });
+// const value = cardNumber.value;
+// const arrayNumber = value.split(" ");
+// console.log(arrayNumber);
 
-cardName.addEventListener("keypress", function (e) {
-  if (e.key == "Enter") {
-    const value = cardName.value;
-    cardNameUser.innerHTML = `<div class="frontCard__cardNumber__numbers">${value}</div>`;
-  }
+// cardNumberUser.innerHTML = `
+//     <div class="frontCard__cardNumber__numbers">${arrayNumber[0]}</div>
+//     <div class="frontCard__cardNumber__numbers">${arrayNumber[1]}</div>
+//     <div class="frontCard__cardNumber__numbers">${arrayNumber[2]}</div>
+//     <div class="frontCard__cardNumber__numbers">${arrayNumber[3]}</div>`;
+
+cardName.addEventListener("input", function () {
+  const value = cardName.value;
+  cardNameUser.innerHTML = `<div class="frontCard__cardNumber__numbers">${value}</div>`;
 });
 
 optionMonth.addEventListener("keydown", function (e) {
@@ -34,4 +43,3 @@ optionMonth.addEventListener("keydown", function (e) {
     expiresDate.innerHTML = `<div class="frontCard__expires__date">${month}/</div>`;
   }
 });
-

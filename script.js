@@ -8,29 +8,32 @@ const optionMonth = document.getElementById("optionMonth");
 const optionYear = document.getElementById("optionYear");
 const expiresDate = document.querySelector(".frontCard__expires__date");
 
-cardNumber.addEventListener("input", function () {
-  const value = cardNumber.value;
-  const arrayNumber = value.split(" ");
-  console.log(arrayNumber);
-  if (arrayNumber.length < 4) {
-    cardNumberUser.innerHTML = `
-    <div class="frontCard__cardNumber__numbers">${arrayNumber[0]}</div>
-    <div class="frontCard__cardNumber__numbers">${arrayNumber[1]}</div>
-    <div class="frontCard__cardNumber__numbers">${arrayNumber[2]}</div>
-    <div class="frontCard__cardNumber__numbers">${arrayNumber[3]}</div>`;
-  } else {
-    return alert("Only 4 digit");
-  }
-});
-// const value = cardNumber.value;
-// const arrayNumber = value.split(" ");
-// console.log(arrayNumber);
+// Function Check if number are correct
 
-// cardNumberUser.innerHTML = `
+// function checkLenght(array) {
+//   if (array.length <= 4) {
+//     console.log(array);
+//   } else {
+//     array.pop();
+//     alert("No More Then 4!");
+//   }
+// }
+
+// cardNumber.addEventListener("input", function () {
+//   let array = [];
+
+//   const value = cardNumber.value;
+//   const arrayNumber = array.push(value);
+//   console.log(arrayNumber);
+//   // arrayNumber.forEach(function (a, i) {
+//   //   console.log(a, i);
+//   // });
+//   cardNumberUser.innerHTML = `
 //     <div class="frontCard__cardNumber__numbers">${arrayNumber[0]}</div>
 //     <div class="frontCard__cardNumber__numbers">${arrayNumber[1]}</div>
 //     <div class="frontCard__cardNumber__numbers">${arrayNumber[2]}</div>
 //     <div class="frontCard__cardNumber__numbers">${arrayNumber[3]}</div>`;
+// });
 
 cardName.addEventListener("input", function () {
   const value = cardName.value;
@@ -42,4 +45,14 @@ optionMonth.addEventListener("keydown", function (e) {
     const month = optionMonth.value;
     expiresDate.innerHTML = `<div class="frontCard__expires__date">${month}/</div>`;
   }
+});
+
+const frontCard = document.querySelector(".frontCard");
+const backCard = document.querySelector(".backCard");
+const inputCvv = document.querySelector(".options__cvvInput");
+
+inputCvv.addEventListener("focus", function () {
+  frontCard.style.transform = "rotate(360deg)";
+  frontCard.style.display = "none";
+  backCard.style.display = "block";
 });

@@ -7,6 +7,8 @@ const cardNumbersDiv = document.querySelectorAll(
 );
 const cardName = document.getElementById("cardName");
 const cardNameUser = document.querySelector(".frontCard__holder__name");
+const cardHolder = document.querySelector(".frontCard__holder");
+
 const optionMonth = document.getElementById("optionMonth");
 const optionYear = document.getElementById("optionYear");
 const expiresDate = document.querySelector(".frontCard__expires__date");
@@ -25,6 +27,22 @@ cardNumber.addEventListener("input", function () {
   cardNumbersDiv.any((div) => div === undefined);
 });
 
+cardNumber.addEventListener("focus", function () {
+  cardNumberInput.classList.add("inputFocus");
+});
+
+cardNumber.addEventListener("blur", function () {
+  cardNumberInput.classList.remove("inputFocus");
+});
+
+cardName.addEventListener("focus", function () {
+  cardHolder.classList.add("inputFocus");
+});
+
+cardName.addEventListener("blur", function () {
+  cardHolder.classList.remove("inputFocus");
+});
+
 // const a = value.split(" ");
 // cardNumberUser.forEach((a, index, array) => {
 //   console.log(a, index, array);
@@ -33,11 +51,6 @@ cardNumber.addEventListener("input", function () {
 //     <div class="frontCard__cardNumber__numbers">${index}</div>
 //     <div class="frontCard__cardNumber__numbers">${index}</div>
 //     <div class="frontCard__cardNumber__numbers">${index}</div>`;
-// });
-
-// cardName.addEventListener("input", function () {
-//   const value = cardName.value;
-//   cardNameUser.innerHTML = `<div class="frontCard__cardNumber__numbers">${value}</div>`;
 // });
 
 // optionMonth.addEventListener("keydown", function (e) {

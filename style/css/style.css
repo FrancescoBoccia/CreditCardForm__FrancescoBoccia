@@ -16,7 +16,7 @@ body {
 
 .container {
   position: absolute;
-  top: 70%;
+  top: 50%;
   right: 50%;
   padding-top: 9rem;
   border-radius: 5px;
@@ -83,184 +83,187 @@ body {
     -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 6px 8px 0px;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 6px 8px 0px; }
 
-.frontCard:hover {
-  -webkit-transform: rotateY(0.25turn);
-          transform: rotateY(0.25turn); }
+.card {
+  width: 350px; }
 
-.frontCard:hover .backCard {
-  -webkit-transform: rotateY(90deg);
-          transform: rotateY(90deg); }
-
-.frontCard {
-  position: absolute;
-  height: 9rem;
-  width: 16rem;
-  padding: 1rem;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#6dd5ed), to(#2193b0));
-  background-image: linear-gradient(#6dd5ed, #2193b0);
+.card__content {
+  text-align: center;
+  position: relative;
   border-radius: 10px;
-  -webkit-transform: translateZ(2rem);
-          transform: translateZ(2rem);
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  padding: 7em;
   -webkit-transition: -webkit-transform 3s;
   transition: -webkit-transform 3s;
   transition: transform 3s;
   transition: transform 3s, -webkit-transform 3s;
-  z-index: 1;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#6dd5ed), to(#2193b0));
+  background-image: linear-gradient(#6dd5ed, #2193b0);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  margin-bottom: 21rem; }
+
+.frontCard,
+.backCard {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2em;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden; }
-  .frontCard__header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    gap: 9.9rem; }
-  .frontCard__pin {
+          backface-visibility: hidden;
+  border-radius: 10px; }
+
+.backCard {
+  -webkit-transform: rotateY(0.5turn);
+          transform: rotateY(0.5turn);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#6dd5ed), to(#2193b0));
+  background-image: linear-gradient(#6dd5ed, #2193b0); }
+
+.frontCard__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 9.9rem; }
+
+.frontCard__pin {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30px;
+  width: 35px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#ffecc7), to(#d0b978));
+  background-image: linear-gradient(to bottom left, #ffecc7, #d0b978);
+  overflow: hidden; }
+  .frontCard__pin__chipLine:nth-child(1) {
+    position: absolute;
+    top: 10px;
+    height: 1px;
+    width: 100%;
+    background-color: black; }
+  .frontCard__pin__chipLine:nth-child(2) {
+    position: absolute;
+    top: 14px;
+    height: 1px;
+    width: 100%;
+    background-color: black; }
+  .frontCard__pin__chipLine:nth-child(3) {
+    position: absolute;
+    top: 18px;
+    width: 100%;
+    height: 1px;
+    background-color: black; }
+  .frontCard__pin__chipLine:nth-child(4) {
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg); }
+  .frontCard__pin__main {
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 30px;
-    width: 35px;
+    height: 15px;
+    width: 13px;
     border: 1px solid black;
-    border-radius: 5px;
+    border-radius: 2px;
     background-image: -webkit-gradient(linear, right top, left bottom, from(#ffecc7), to(#d0b978));
     background-image: linear-gradient(to bottom left, #ffecc7, #d0b978);
-    overflow: hidden; }
-    .frontCard__pin__chipLine:nth-child(1) {
-      position: absolute;
-      top: 10px;
-      height: 1px;
-      width: 100%;
-      background-color: black; }
-    .frontCard__pin__chipLine:nth-child(2) {
-      position: absolute;
-      top: 14px;
-      height: 1px;
-      width: 100%;
-      background-color: black; }
-    .frontCard__pin__chipLine:nth-child(3) {
-      position: absolute;
-      top: 18px;
-      width: 100%;
-      height: 1px;
-      background-color: black; }
-    .frontCard__pin__chipLine:nth-child(4) {
-      position: absolute;
-      height: 1px;
-      width: 100%;
-      background-color: black;
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg); }
-    .frontCard__pin__main {
-      position: relative;
-      height: 15px;
-      width: 13px;
-      border: 1px solid black;
-      border-radius: 2px;
-      background-image: -webkit-gradient(linear, right top, left bottom, from(#ffecc7), to(#d0b978));
-      background-image: linear-gradient(to bottom left, #ffecc7, #d0b978);
-      z-index: 3; }
-  .frontCard__cardBrand {
-    font-size: 1.1rem;
-    color: #fff; }
-  .frontCard__cardNumber {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 25px;
-    padding: 0.2rem;
-    margin-top: 1.5em;
-    background-color: transparent;
-    color: #fff; }
-    .frontCard__cardNumber__numbers {
-      width: 100%;
-      text-align: center;
-      background: transparent;
-      border: none; }
-  .frontCard__flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-top: 1.8rem; }
-  .frontCard__holder {
-    width: 50%;
-    padding: 0.2rem; }
-    .frontCard__holder__title {
-      font-size: 10px;
-      color: gray; }
-    .frontCard__holder__name {
-      font-size: 16px;
-      width: -webkit-max-content;
-      width: -moz-max-content;
-      width: max-content;
-      color: white; }
-  .frontCard__expires__title {
+    z-index: 3; }
+
+.frontCard__cardBrand {
+  font-size: 1.1rem;
+  color: #fff; }
+
+.frontCard__cardNumber {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 25px;
+  padding: 0.2rem;
+  margin-top: 1.5em;
+  background-color: transparent;
+  color: #fff; }
+  .frontCard__cardNumber__numbers {
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    border: none; }
+
+.frontCard__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1.8rem; }
+
+.frontCard__holder {
+  width: 50%;
+  padding: 0.2rem; }
+  .frontCard__holder__title {
+    text-align: left;
     font-size: 10px;
     color: gray; }
-  .frontCard__expires__date {
+  .frontCard__holder__name {
     font-size: 16px;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
     color: white; }
 
+.frontCard__expires__title {
+  text-align: left;
+  font-size: 10px;
+  color: gray; }
+
+.frontCard__expires__date {
+  font-size: 16px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: white; }
+
 .inputFocus {
   border: 1px solid #fff;
   border-radius: 5px; }
 
-.backCard {
-  position: absolute;
-  height: 9rem;
-  width: 16rem;
+.backCard__header {
   padding: 1rem;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#6dd5ed), to(#2193b0));
-  background-image: linear-gradient(#6dd5ed, #2193b0);
-  border-radius: 10px;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transform: translateZ(2rem);
-          transform: translateZ(2rem);
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transition: -webkit-transform 3s;
-  transition: -webkit-transform 3s;
-  transition: transform 3s;
-  transition: transform 3s, -webkit-transform 3s; }
-  .backCard__header {
-    padding: 1rem;
-    margin-bottom: 1rem;
-    background-color: black; }
-  .backCard__cvvTitle {
-    width: 100%;
-    font-size: 12px;
-    text-align: right;
-    color: #fff; }
-  .backCard__inputCVV {
-    padding: 1rem;
-    background-color: #fff; }
-  .backCard__cardBrand {
-    font-size: 14px;
-    margin-top: 1rem;
-    float: right; }
+  margin-bottom: 1rem;
+  background-color: black; }
+
+.backCard__cvvTitle {
+  width: 100%;
+  font-size: 12px;
+  text-align: right;
+  color: #fff; }
+
+.backCard__inputCVV {
+  padding: 1rem;
+  background-color: #fff; }
+
+.backCard__cardBrand {
+  font-size: 14px;
+  margin-top: 1rem;
+  float: right; }
 /*# sourceMappingURL=style.css.map */

@@ -69,3 +69,9 @@ cardName.addEventListener("blur", function () {
 //   frontCard.style.display = "none";
 //   backCard.style.display = "block";
 // });
+
+// On Focus
+
+// .card:hover .card__content {
+//   transform: rotateY(0.5turn);
+// }

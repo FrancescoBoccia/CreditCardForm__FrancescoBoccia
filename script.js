@@ -15,17 +15,26 @@ const expiresDate = document.querySelector(".frontCard__expires__date");
 
 const cardValue = document.querySelector(".frontCard__cardNumber__numbers");
 
-cardNumber.addEventListener("input", function () {
-  const value = cardNumber.value;
-  const a = value.split(" ");
+// 12 Digit Number
+
+function moveToNext(curr, next) {
   cardNumberInput.innerHTML = `
-  <div class="frontCard__cardNumber__numbers">${a[0]}</div>
-  <div class="frontCard__cardNumber__numbers">${a[1]}</div>
-  <div class="frontCard__cardNumber__numbers">${a[2]}</div>
-  <div class="frontCard__cardNumber__numbers">${a[3]}</div>`;
-  console.log(cardNumbersDiv);
-  cardNumbersDiv.any((div) => div === undefined);
-});
+
+  `;
+}
+
+// cardNumber.addEventListener("input", function () {
+//   const value = cardNumber.value;
+//   const a = value.split(" ");
+//   cardNumberInput.innerHTML = `
+//   <div class="frontCard__cardNumber__numbers">${a[0]}</div>
+//   <div class="frontCard__cardNumber__numbers">${a[1]}</div>
+//   <div class="frontCard__cardNumber__numbers">${a[2]}</div>
+//   <div class="frontCard__cardNumber__numbers">${a[3]}</div>`;
+//   if (a.value === 4) {
+//     console.log("w");
+//   }
+// });
 
 cardNumber.addEventListener("focus", function () {
   cardNumberInput.classList.add("inputFocus");
@@ -43,35 +52,18 @@ cardName.addEventListener("blur", function () {
   cardHolder.classList.remove("inputFocus");
 });
 
-// const a = value.split(" ");
-// cardNumberUser.forEach((a, index, array) => {
-//   console.log(a, index, array);
-//   cardNumberUser.innerHTML = `
-//     <div class="frontCard__cardNumber__numbers">${index}</div>
-//     <div class="frontCard__cardNumber__numbers">${index}</div>
-//     <div class="frontCard__cardNumber__numbers">${index}</div>
-//     <div class="frontCard__cardNumber__numbers">${index}</div>`;
-// });
+// Cvv Card
+const cardContent = document.querySelector(".card__content");
+const inputCvv = document.querySelector(".options__cvvInput");
+const numberCvv = document.querySelector(".backCard__inputCVV");
 
-// optionMonth.addEventListener("keydown", function (e) {
-//   if (e.key == "Tab") {
-//     const month = optionMonth.value;
-//     expiresDate.innerHTML = `<div class="frontCard__expires__date">${month}/</div>`;
-//   }
-// });
+inputCvv.addEventListener("focus", function () {
+  cardContent.style.transform = "rotateY(0.5turn)";
+  console.log(inputCvv);
+});
 
-// const frontCard = document.querySelector(".frontCard");
-// const backCard = document.querySelector(".backCard");
-// const inputCvv = document.querySelector(".options__cvvInput");
+inputCvv.addEventListener("blur", function () {
+  cardContent.style.transform = "rotateY(1turn)";
+});
 
-// inputCvv.addEventListener("focus", function () {
-//   frontCard.style.transform = "rotate(360deg)";
-//   frontCard.style.display = "none";
-//   backCard.style.display = "block";
-// });
-
-// On Focus
-
-// .card:hover .card__content {
-//   transform: rotateY(0.5turn);
-// }
+console.log(inputCvv.value);

@@ -73,7 +73,6 @@
 
     <div class="card">
       <div class="card__content">
-        
         <!-- Front Card -->
 
         <div class="frontCard">
@@ -89,10 +88,44 @@
           </div>
 
           <div class="frontCard__cardNumber">
+            <input
+              id="input__1"
+              class="frontCard__cardNumber__numbers"
+              type="text"
+              maxlength="4"
+              placeholder="####"
+              onkeyup="moveToNext(input__1, input__2)"
+            />
+            <input
+              id="input__2"
+              class="frontCard__cardNumber__numbers"
+              type="text"
+              maxlength="4"
+              placeholder="####"
+              onkeyup="moveToNext(input__2, input__3)"
+            />
+            <input
+              id="input__3"
+              class="frontCard__cardNumber__numbers"
+              type="text"
+              maxlength="4"
+              placeholder="####"
+              onkeyup="moveToNext(input__3, input__4)"
+            />
+            <input
+              id="input__4"
+              class="frontCard__cardNumber__numbers"
+              type="text"
+              maxlength="4"
+              placeholder="####"
+            />
+            <!-- <input type="text">
+            <input type="text">
+            <input type="text">
             <div class="frontCard__cardNumber__numbers">####</div>
             <div class="frontCard__cardNumber__numbers">####</div>
             <div class="frontCard__cardNumber__numbers">####</div>
-            <div class="frontCard__cardNumber__numbers">####</div>
+            <div class="frontCard__cardNumber__numbers">####</div> -->
           </div>
 
           <div class="frontCard__flex">

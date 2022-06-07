@@ -18,9 +18,9 @@ const cardValue = document.querySelector(".frontCard__cardNumber__numbers");
 // 12 Digit Number
 
 function moveToNext(curr, next) {
-  cardNumberInput.innerHTML = `
-
-  `;
+  if (curr.value.length === curr.maxLength) {
+    next.focus();
+  }
 }
 
 // cardNumber.addEventListener("input", function () {
